@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        table { border-collapse: collapse; width: 400px;}
+        td { border: 5px solid #000; }
+    </style>
+</head>
+<body>
+    <!-- В файле task2.html необходимо сверстать картину Пита Мондриана "Композиция с красным, синим и желтым" используя таблицу.
+        Смотри файл tables_hw.png
+         Привожу цвета используемые в картине:
+
+        #fffa69 - желтый, #074481 - синий, #ff5b2d - красный, #000000 - черный, #ffffff - белый
+
+        Пропорции картины и ячеек можно не сохранять. Важно объединение ячеек и их раскраска.
+
+        В head следующий кусок кода
+
+        <style type="text/css">
+            table { border-collapse: collapse; width: 400px;}
+            td { border: 5px solid #000; }
+        </style>
+
+        А разукрасить ячейку определенным цветом можно аттрибутом bgcolor
+
+        <td bgcolor="#00000ff"><br/></td>
+        -->
+    <table>
+        <tr>
+            <td colspan="2" bgcolor="#ffffff"></td><br/></td>
+            <td colspan="2" bgcolor="#ffffff"><br/></td>
+            <td colspan="2" bgcolor="#fffa69"><br/></td>
+        </tr>
+        <tr>
+            <td><br/></td>
+            <td rowspan="2" colspan="3" bgcolor="#ff5b2d"><br/></td>
+            <td colspan="2" bgcolor="#fffa69"><br/></td>
+        </tr>
+        <tr>
+            <td rowspan="2" bgcolor="#ffffff"><br/></td>
+            <td bgcolor="#ffffff"><br/></td>
+            <td bgcolor="#ffffff"><br/></td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2" bgcolor="#000000"><br/></td>
+            <td bgcolor="#ffffff"><br/></td>
+            <td colspan="2" bgcolor="#ffffff"><br/></td>
+        </tr>
+        <tr>
+            <td rowspan="3" bgcolor="#fffa69"><br/></td>
+            <td bgcolor="#ffffff"><br/></td>
+            <td rowspan="2" colspan="2" bgcolor="#074481"><br/></td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2" bgcolor="#ffffff"><br/></td>
+            <td bgcolor="#000000"><br/></td>
+        </tr>
+        <tr>
+            <td colspan="3" bgcolor="#ffffff"><br/></td>
+        </tr>
+    </table>
+</body>
+</html>

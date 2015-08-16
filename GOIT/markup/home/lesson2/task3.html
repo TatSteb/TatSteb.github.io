@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--В файле task3.html необходимо сверстать форму как на изображении forms_hw.png
+    Для переносов строк использовать тег br.
+    Количество вариантов в поле год и месяц можно делать 3-4 (не обязательно перечислять все).
+    Названия полей (name="") - на ваше усмотрение. -->
+
+    <!-- Описание
+        Тег <label> устанавливает связь между определенной меткой, в качестве которой обычно выступает текст, и элементом формы (<input>, <select>, <textarea>). Такая связь необходима, чтобы изменять значения элементов формы при нажатии курсором мыши на текст. Кроме того, с помощью <label> можно устанавливать горячие клавиши на клавиатуре и переходить на активный элемент подобно ссылкам.
+
+        Существует два способа связывания объекта и метки. Первый заключается в использовании идентификатора id внутри элемента формы
+            и указании его имени в качестве атрибута for тега <label>.
+            При втором способе элемент формы помещается внутрь контейнера <label>.
+
+            Синтаксис
+
+            <input id="идентификатор"><label for="идентификатор">Текст</label>
+            <label><input type="..."> Текст</label>
+
+            Атрибуты
+
+            accesskey Доступ к элементам формы с помощью горячих клавиш.
+            for       Идентификатор элемента, с которым следует установить связь.
+
+            !!! id Указывает имя стилевого идентификатора (это универсальный артибут), а
+                name Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать
+                (по нажатию save - идет отправка введенных данных)
+
+        -->
+
+    <form action="#">
+        <label for="name"> Name </label>
+        <br/>
+        <input type="text" name="name" id="name" />
+        <br/> <br/>
+        <label for="email"> E-mail</label>
+        <br/>
+        <input type="email" name="email" id="email" />
+        <br/> <br/>
+        <label>Sex</label>
+        <br/>
+        <input type="radio" name="sex" value="male" /> Male
+        <input type="radio" name="sex" value="female" /> Female
+        <br/> <br/>
+        <label>Current Status</label>
+        <br/>
+        <input type="checkbox" name="status" value="student" /> Student
+        <br/>
+        <input type="checkbox" name="status" value="empoyed" /> Empoyed
+        <br/>
+        <input type="checkbox" name="status" value="unempoyed" /> Unempoyed
+        <br/>  <br/>
+        <label>Month and Year of Birth</label>
+        <br/>
+        <select name="month" id="month">
+            <option value="january">January</option>
+            <option value="fabruary">Fabruary</option>
+            <option value="march">March</option>
+        </select>
+        <select name="year" id="year">
+            <option value="1980">1980</option>
+            <option value="1981">1981</option>
+            <option value="1982">1982</option>
+        </select>
+        <br/><br/>
+        <label for="skills">Skills and Technologes</label>
+        <br/> <br/>
+        <select name="skills" id="skills" size="10" multiple="multiple">
+            <optgroup label="Tech skills">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+                <option value="git">GIT</option>
+            </optgroup>
+`           <optgroup label="Soft skills">
+                <option value="timeman">Time management</option>
+                <option value="proact">Proactivity</option>
+                <option value="teamwork">Teamwork</option>
+                <option value="lead">Leadership</option>
+        </optgroup>
+        </select>
+        <br/>  <br/>
+        <label for="photo">Photo</label>
+        <input type="file" name="photo" id="photo"/>
+        <br/><br/>
+        <label for="comments">Comments</label>
+        <br/>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        <br/><br/>
+        <input type="submit" value="Save" />
+    </form>
+
+</body>
+</html>
