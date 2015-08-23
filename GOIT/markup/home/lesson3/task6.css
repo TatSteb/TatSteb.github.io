@@ -1,0 +1,57 @@
+/* Убираем квадратики checkbox-ов*/
+input[type="checkbox"]
+{
+    display: none;
+}
+/* Подчеркиваем надписи checkbox-ов*/
+label
+{
+    text-decoration: underline;
+}
+/* Стили span-ов*/
+span
+{
+    border-radius: 5px;
+    padding: 0 5px;
+    color: white;
+}
+/* Выключение span-ов*/
+#red:checked ~ span[class="red"],
+#green:checked ~ span[class="green"],
+#blue:checked ~ span[class="blue"]
+{
+    display: none;
+}
+/* Прозрачность надписей checkbox-ов*/
+#red:checked ~ label[for="red"],
+#green:checked ~ label[for="green"],
+#blue:checked ~ label[for="blue"]
+{
+    opacity: 0.2;
+}
+/* Формат span-ов*/
+span[class="red"]
+{
+    background: red;
+}
+span[class="green"]
+{
+    background: green;
+}
+span[class="blue"]
+{
+    background: blue;
+}
+/* Цвета надписей checkbox-ов*/
+label[for="red"]
+{
+    color: red;
+}
+label[for="green"]
+{
+    color: green;
+}
+label[for="blue"]
+{
+    color: blue;
+}
