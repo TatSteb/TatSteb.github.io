@@ -1,0 +1,55 @@
+nav {
+    background-color: deepskyblue;
+    font-family: Impact, sans-serif;
+    width: 900px;
+    text-transform: uppercase;
+    line-height: 2em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+/*Внешний вид подменю*/
+.submenu {
+    position:absolute;
+    width: 820px;
+    background-color: #EEEEEE;
+    left: 0;
+    white-space:nowrap;
+    font-size: 12px;
+    display: none;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.5);
+    text-align: left;
+    padding-left: 80px;
+    margin-left: 8px;
+}
+
+.submenu>li>a {
+    color: #999;
+    text-transform: capitalize;
+}
+
+/*Описываем поведение при наведении и выборе*/
+.menu li:hover,
+.menu li:focus {
+    background-color: #EEEEEE;
+}
+
+.menu li:hover a,
+.menu li:focus a{
+    color: #999;
+}
+
+.menu li:hover .submenu,
+.menu li:focus .submenu {
+    display: block;
+}
