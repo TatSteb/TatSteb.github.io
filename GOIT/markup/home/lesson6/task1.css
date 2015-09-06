@@ -1,0 +1,197 @@
+.propositions{
+    position: relative;
+    display: inline-block;
+}
+
+h2{
+    -position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.first_proposition,
+.third_proposition {
+    display: inline-block;
+    border: 2px solid rgb(232,234,236);
+    border-radius: 5px;
+    width: 25%;
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.first_proposition {
+    left: 6%;
+}
+
+.third_proposition {
+    left: 4%;
+}
+.second_proposition {
+    display: inline-block;
+    border: solid rgb(238,129,41);
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    background-color: rgb(255,255,255);
+    width: 25%;
+    margin: 0 auto;
+    min-width: 200px;
+    max-width: 400px;
+    position: relative;
+    left: 5%;
+    z-index: 2;
+}
+
+.first_header {
+    background-color: rgb(55,194,211);
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    white-space:nowrap;
+    display: block;
+}
+
+.second_header{
+    background-color: rgb(238,129,41);
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    white-space:nowrap;
+    display: block;
+}
+
+.third_header{
+    background-color: rgb(28,183,154);
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    white-space:nowrap;
+    display: block;
+}
+
+.first_caption,
+.second_caption,
+.third_caption{
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(63,64,66);
+    padding: 10px 0;
+    white-space:nowrap;
+    display: block;
+}
+
+.first_price,
+.second_price,
+.third_price{
+    position: relative;
+    color: rgb(53,73,90);
+    width: 90%;
+    margin: 5% auto;
+}
+
+.first_price_sum,
+.second_price_sum,
+.third_price_sum{
+    display: block;
+    text-align: center;
+    position: relative;
+    color: rgb(53,73,90);
+    font-size: 3.5em;
+    font-weight: bold;
+    width: 90%;
+    line-height: 1ex;
+}
+
+.first_price_curr,
+.second_price_curr,
+.third_price_curr{
+    display: block;
+    position: relative;
+    margin:  0 20%;
+    line-height: 1ex;
+}
+
+.first_price_type,
+.second_price_type,
+.third_price_type{
+    display: block;
+    position: relative;
+    margin: 0 60%;
+}
+
+li{
+    color: rgb(136,140,148);
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 0 auto 0 -5%;
+    padding: 5px 0;
+    border: 1px solid rgb(255,255,255);
+    white-space:nowrap;
+    list-style-type: none;
+    font-size: 0.5em;
+}
+
+li:before{
+    content: url(chk.png);
+    padding:0 15px;
+}
+
+li:nth-child(2n-1){
+    background-color: rgb(237,245,253);
+}
+
+li:nth-child(2n){
+    background-color: rgb(245,245,246);
+}
+
+.second_preferences li:nth-child(4n+1),
+.second_preferences li:nth-child(4n+2){
+    text-transform: uppercase;
+}
+
+
+#first_submit,
+#third_submit{
+    display:block;
+    border: 0;
+    background-color: rgb(51,113,186);
+    color: rgb(255,255,255);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 rgb(22,67,106);
+    width: 90%;
+    padding: 5px 0;
+    margin: 10% auto;
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+
+#second_submit{
+    display:block;
+    border: 0;
+    background-color: rgb(238,129,41);
+    color: rgb(255,255,255);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 rgb(179,86,11);
+    width: 90%;
+    padding: 5px 0;
+    margin: 10% auto;
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+
+#first_submit:hover,
+#second_submit:hover,
+#third_submit:hover {
+    box-shadow: none;
+}
