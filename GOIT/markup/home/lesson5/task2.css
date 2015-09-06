@@ -73,7 +73,7 @@ li{
 }
 
 li:before{
-    content: url(chk.png);
+    content: url(Chk.png);
     padding:0 15px;
 }
 
