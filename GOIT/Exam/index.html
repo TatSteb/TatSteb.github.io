@@ -122,40 +122,49 @@
 <div class="section_tabs">
     <p class="section_header">Ta<span class="highlited">bbb</span>s get your in line</p>
     <div class="tabs">
-        <div class="tabs__header">
-            <div class="tabs__item tabs__item_selected">Tabbb One</div>
-            <div class="tabs__item">Tabbb Two</div>
-            <div class="tabs__item">Tabbb Three</div>
-        </div>
-        <div class="tabs__content tabs__content_1 tabs__content_selected">
-        <div class="tabs__content_items">
-        <div class="tabs__content_items_1_header">You content can be <span class="highlited">highlighted</span> like this.</div>
-        <hr/>
-        <div class="tabs__content_items_1">
-           <div class="tabs__content_items_1_list">
-            <ul>
-            <li>Magna Porta</li>
-            <li>Cras Amet Pharetra</li>
-            <li>Ornare Dolor Pharetra</li>
-            <li>Nibh Sit Elit</li>
-            <li>Venenatis Tortor Aenean</li>
-            </ul>
-           </div>
-        </div>
-        <div class="tabs__content_items2">
-            <img src = "./img/tabs1.png" alt = "road" width = "116" height = "93" align="center" class="tabs__content_items2_img"/>
-            <p class="tabs_item_header">Type a Title</p>
-            <p class="tabs_item_text">Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet magna.</p>
-        </div>
-        <div class="tabs__content_items2">
-            <img src = "./img/tabs2.png" alt = "ship" width = "116" height = "93" align="center" class="tabs__content_items2_img"/>
-            <p class="tabs_item_header">Type a Title</p>
-                <p class="tabs_item_text">Donec id elit non mi porta gravida at eget metus.</p>
-        </div>
+
+        <input id="tab_1" type="radio" name="tab" checked="checked" />
+        <input id="tab_2" type="radio" name="tab" />
+        <input id="tab_3" type="radio" name="tab" />
+
+        <label for="tab_1" id="tab_l1">Tabbb One</label>
+        <label for="tab_2" id="tab_l2">Tabbb Two</label>
+        <label for="tab_3" id="tab_l3">Tabbb Three</label>
+        <div class="bottom_line"></div>
+        <div style="clear:both"></div>
+
+        <div class="tabs_cont">
+            <div id="tab_c1">
+                <div class="tab_content_header">You content can be <span class="highlited">highlighted</span> like this.</div>
+                <div class="tab_columns">
+                <div class="tab__content_items_1">
+                    <div class="tabs__content_items_1_list">
+                        <ul>
+                            <li>Magna Porta</li>
+                            <li>Cras Amet Pharetra</li>
+                            <li>Ornare Dolor Pharetra</li>
+                            <li>Nibh Sit Elit</li>
+                            <li>Venenatis Tortor Aenean</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab__content_items2">
+                    <img src = "./img/tabs1.png" alt = "road" width = "116" height = "93" align="center" class="tabs__content_items2_img"/>
+                    <p class="tabs_item_header">Type a Title</p>
+                    <p class="tabs_item_text">Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet magna.</p>
+                </div>
+                <div class="tab__content_items2">
+                    <img src = "./img/tabs2.png" alt = "ship" width = "116" height = "93" align="center" class="tabs__content_items2_img"/>
+                    <p class="tabs_item_header">Type a Title</p>
+                    <p class="tabs_item_text">Donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+                </div>
+            </div>
+            <div id="tab_c2">Content of second tab</div>
+            <div id="tab_c3">Content of third tab</div>
         </div>
     </div>
 </div>
-<hr/>
 <div class="section_links">
     <div class="links_single_menu_title">
     <p class="links_header">SINGLE MENU TITLE</p> <br/>
