@@ -40,26 +40,43 @@
                 <p class="banner_preview_text_from">from 21K <span class="banner_preview_text_location">- in Texas, USA</span></p>
             </div>
             <div class="banner_preview_img">
-                <img src = "./img/spiderman.png" alt = "Spider-Man" width = "292" height = "188" align="left"/>
+
+                <div class="wrapper">
+                    <input type="radio" name="point" id="slide1" checked>
+                    <input type="radio" name="point" id="slide2">
+                    <input type="radio" name="point" id="slide3">
+                    <input type="radio" name="point" id="slide4">
+                    <div class="slider">
+                        <div class="slides slide1"></div>
+                        <div class="slides slide2"></div>
+                        <div class="slides slide3"></div>
+                        <div class="slides slide4"></div>
+                    </div>
+                    <div class="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                    </div>
+                </div>
             </div>
+
         </div>
         <div class="banner_text">
-            <p class="banner_text_header">The Amaizing Spider-Man</p>
-            <p class="banner_text_content">Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit.</p>
+            <div class="banner_text_top">
+                <p class="banner_text_header">The Amaizing Spider-Man</p>
+                <p class="banner_text_content">Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit.</p>
+            </div>
             <div class="main_watch"><a href="">
                 <div id="watch_button" class="watch_button">
                     <span class="watch_button_text_top">Watch Trailer</span>
                     <span class="watch_button_text_bottom">IN 720P QUALITY</span>
-                </div>
-                <div id="watch_button2" class="watch_button2">
-                    <span class="watch_button_text_line">&#124</span>
                 </div>
                 <div id="watch_button3" class="watch_button3">
                     <span class="watch_button_text_go">&#62</span>
                 </div>
                 </a>
             </div>
-            <div class="main_text_more">or just <a href="">click here</a> and find out more</div>
         </div>
     </div>
 <hr/>
@@ -68,6 +85,7 @@
     <div>
         <div class="section_pictures_item_header">
             <img src = "./img/cont1.png" alt = "forest lake" width = "295" height = "142" align="center" class="section_pictures_item_img"/>
+            <div class="img_opacity"></div>
             <p class="section_pictures_item_header_line1">Vehicula Inceptos Pharetra</p>
             <p class="section_pictures_item_header_line2">Aenean eu leo quam. Pellentesque ornare sem lacinia.</p>
         </div>
@@ -79,6 +97,7 @@
     <div>
         <div class="section_pictures_item_header">
             <img src = "./img/cont2.png" alt = "field" width = "295" height = "142" align="center" class="section_pictures_item_img"/>
+            <div class="img_opacity"></div>
             <p class="section_pictures_item_header_line1">Euismod Pellentesque Egestas Commodo</p>
             <p class="section_pictures_item_header_line2">Cum sociis natoque penatibus et magnis dis parturient.</p>
         </div>
@@ -89,6 +108,7 @@
     <div>
         <div class="section_pictures_item_header">
             <img src = "./img/cont3.png" alt = "bird" width = "295" height = "142" align="center" class="section_pictures_item_img"/>
+            <div class="img_opacity"></div>
             <p class="section_pictures_item_header_line1">Tristique Dapibus</p>
             <p class="section_pictures_item_header_line2">Curabitur blandit tempus porttitor.</p>
         </div>
@@ -132,9 +152,6 @@
             <p class="tabs_item_header">Type a Title</p>
                 <p class="tabs_item_text">Donec id elit non mi porta gravida at eget metus.</p>
         </div>
-            <!---
-        <div class="tabs__content tabs__content_2"> </div>
-        <div class="tabs__content tabs__content_3"> </div> -->
         </div>
     </div>
 </div>
