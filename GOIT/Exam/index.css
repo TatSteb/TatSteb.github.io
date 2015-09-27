@@ -415,9 +415,110 @@ a{
     margin-left: 2px;
     background: rgba(0, 0, 0, 0.2);
 }
+
+.icons{
+    display: none;
+    position: absolute;
+    width: 145px;
+    height: 64px;
+    margin-top: -105px;
+    margin-left: 80px;
+    -background: rgba(0, 0, 0, 0.2);
+    -z-index: 1000;
+}
+
+.icons>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circle1{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 5px solid rgba(204,204,204,0.5);
+    -border-color:transparent;
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    -moz-background-clip: content;
+    -webkit-background-clip: content;
+    background-clip: content-box;
+}
+
+.circle2{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 10px solid rgba(204,204,204,0.5);
+    -border-color:transparent;
+    -moz-background-clip: border;
+    -webkit-background-clip: border;
+    background-clip: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    -moz-background-clip: content;
+    -webkit-background-clip: content;
+    background-clip: content-box;
+}
+
+.icon_download{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: url("./img/icons.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.circle1:hover{
+    border: 5px solid rgba(204,204,204,0.8);
+}
+
+.circle2:hover{
+    border: 10px solid rgba(204,204,204,0.8);
+}
+
+.icon_big{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: url("./img/icons.png");
+    background-repeat: no-repeat;
+    background-position: -19px 0;
+    margin-top: 12px;
+    margin-left: 13px;
+}
+
+.icon_wide{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: url("./img/icons.png");
+    background-repeat: no-repeat;
+    background-position: -38px 0;
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
 .section_pictures_item_header:hover .img_opacity{
     display: block;
 }
+
+.section_pictures_item_header:hover .icons{
+    display: block;
+}
+
 
 .section_pictures_item_header:hover {
     background-color: #FFF;
