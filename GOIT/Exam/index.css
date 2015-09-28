@@ -450,6 +450,7 @@ a{
     -moz-background-clip: content;
     -webkit-background-clip: content;
     background-clip: content-box;
+    cursor: pointer;
 }
 
 .circle2{
@@ -469,6 +470,7 @@ a{
     -moz-background-clip: content;
     -webkit-background-clip: content;
     background-clip: content-box;
+    cursor: pointer;
 }
 
 .icon_download{
