@@ -69,6 +69,7 @@ nav {
 
 .slogan_highlighted {
     font-size: 48px;
+    font-weight: bold;
     text-transform: uppercase;
     padding: 0 100px;
 }
