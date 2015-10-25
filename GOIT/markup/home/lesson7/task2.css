@@ -1,0 +1,102 @@
+body {
+    font-family: 'Open Sans', sans-serif, monospace;
+    width: 1400px;
+    margin: 0;
+    padding: 0;
+    color: #888c94;
+}
+
+.header {
+    padding: 0 190px;
+    height: 90px;
+}
+
+.logo {
+    float: left;
+    color: #ee8129;
+    font-size: 36px;
+}
+
+.logo_highlited {
+    color: #3170a8;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    font-size: 14px;
+    line-height: 80px;
+}
+
+.top-menu {
+    width: 1020px;
+    margin: 50px auto;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.top-menu a {
+    color: #888c94;
+    text-decoration: none;
+    padding: 0 22px 35px 22px;
+    cursor: pointer;
+}
+
+.top-menu li {
+    display: inline-block;
+}
+
+.top-menu a:hover,
+.top-menu a:focus {
+    color: #3170a8;
+    border-bottom: 2px solid;
+}
+
+.banner {
+    margin: 0;
+    padding: 0 190px;
+    height: 585px;
+    background-image: url("./bg_banner.png");
+    color: #ffffff;
+    text-align: center;
+}
+
+.slogan {
+    position: relative;
+    padding-top: 169px;
+    font-size: 36px;
+}
+
+.slogan_highlighted {
+    font-size: 48px;
+    text-transform: uppercase;
+    padding: 0 100px;
+}
+
+.slogan_explanation {
+    font-size: 20px;
+    font-style: italic;
+    padding: 0 190px;
+}
+
+.apply_button {
+    display:block;
+    border: 2px #96a7b9 solid;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 2px;
+    width: 246px;
+    padding: 22px 0;
+    margin: 40px auto;
+}
+
+.banner a {
+    text-decoration: none;
+ }
+
+.apply_button:hover {
+    background-color: #3170a8;
+}
