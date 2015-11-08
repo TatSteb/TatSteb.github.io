@@ -505,5 +505,122 @@ nav {
 }
 
 .contacts {
+    height: 345px;
+    margin: 0;
     padding: 0 190px;
+    font-size: 14px;
+}
+
+.contacts__list {
+    vertical-align: top;
+    margin: 40px 0;
+    padding: 0;
+    display: inline-block;
+    width: 230px;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+.contacts__list__text {
+    display: inline-block;
+    width: 120px;
+    padding-left: 40px;
+}
+
+.contacts__list__address__img {
+    display: inline-block;
+    position: relative;
+    height: 31px;
+    width: 25px;
+    vertical-align: top;
+    background: url("./img/contacts.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.contacts__list__tel__img {
+    display: inline-block;
+    position: relative;
+    height: 31px;
+    width: 25px;
+    vertical-align: top;
+    background: url("./img/contacts.png");
+    background-repeat: no-repeat;
+    background-position: 0 -31px;
+}
+
+.contacts__list__mail__img {
+    display: inline-block;
+    position: relative;
+    height: 31px;
+    width: 25px;
+    vertical-align: top;
+    background: url("./img/contacts.png");
+    background-repeat: no-repeat;
+    background-position: 0 -62px;
+}
+
+.contacts__list__socials {
+    margin-top: 10px;
+}
+
+.contacts__list__socials__fb {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    height: 46px;
+    width: 47px;
+    vertical-align: top;
+    background: url("./img/contacts_social.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.contacts__list__socials__twitter {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    height: 46px;
+    width: 47px;
+    vertical-align: top;
+    background: url("./img/contacts_social.png");
+    background-repeat: no-repeat;
+    background-position: -46px 0;
+}
+
+.contacts__list__socials__in {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    height: 46px;
+    width: 47px;
+    vertical-align: top;
+    background: url("./img/contacts_social.png");
+    background-repeat: no-repeat;
+    background-position: -93px 0;
+}
+
+.contacts__map {
+    display: inline-block;
+    width: 520px;
+    margin-left: 255px;
+}
+
+.footer {
+    margin: 0;
+    padding: 24px 0;
+    height: 74px;
+    text-align: center;
+    background-color: #3070a8;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.footer__companyname {
+    font-weight: bold;
+}
+
+.footer__site {
+    font-weight: bold;
+    color: #23394f;
 }
