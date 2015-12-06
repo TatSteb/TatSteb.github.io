@@ -1,6 +1,6 @@
 /**
- Обычно когда кофе готов, мы хотим что-то сделать, например выпить его.
- Сейчас при готовности срабатывает функция onReady, но она жёстко задана в коде:
+ РћР±С‹С‡РЅРѕ РєРѕРіРґР° РєРѕС„Рµ РіРѕС‚РѕРІ, РјС‹ С…РѕС‚РёРј С‡С‚Рѕ-С‚Рѕ СЃРґРµР»Р°С‚СЊ, РЅР°РїСЂРёРјРµСЂ РІС‹РїРёС‚СЊ РµРіРѕ.
+ РЎРµР№С‡Р°СЃ РїСЂРё РіРѕС‚РѕРІРЅРѕСЃС‚Рё СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ С„СѓРЅРєС†РёСЏ onReady, РЅРѕ РѕРЅР° Р¶С‘СЃС‚РєРѕ Р·Р°РґР°РЅР° РІ РєРѕРґРµ:
  function CoffeeMachine(power, capacity) {
   var waterAmount = 0;
   var WATER_HEAT_CAPACITY = 4200;
@@ -8,32 +8,32 @@
     return waterAmount * WATER_HEAT_CAPACITY * 80 / power;
   }
   this.setWaterAmount = function(amount) {
-    // ... проверки пропущены для краткости
+    // ... РїСЂРѕРІРµСЂРєРё РїСЂРѕРїСѓС‰РµРЅС‹ РґР»СЏ РєСЂР°С‚РєРѕСЃС‚Рё
     waterAmount = amount;
   };
   this.getWaterAmount = function(amount) {
     return waterAmount;
   };
   function onReady() {
-      alert( 'Кофе готов!' );
+      alert( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }
   this.run = function() {
     setTimeout(onReady, getTimeToBoil());
   };
 
 }
- Создайте сеттер setOnReady, чтобы код снаружи мог назначить свой onReady, вот так:
+ РЎРѕР·РґР°Р№С‚Рµ СЃРµС‚С‚РµСЂ setOnReady, С‡С‚РѕР±С‹ РєРѕРґ СЃРЅР°СЂСѓР¶Рё РјРѕРі РЅР°Р·РЅР°С‡РёС‚СЊ СЃРІРѕР№ onReady, РІРѕС‚ С‚Р°Рє:
 
  var coffeeMachine = new CoffeeMachine(20000, 500);
  coffeeMachine.setWaterAmount(150);
  coffeeMachine.setOnReady(function() {
   var amount = coffeeMachine.getWaterAmount();
-  alert( 'Готов кофе: ' + amount + 'мл' ); // Кофе готов: 150 мл
+  alert( 'Р“РѕС‚РѕРІ РєРѕС„Рµ: ' + amount + 'РјР»' ); // РљРѕС„Рµ РіРѕС‚РѕРІ: 150 РјР»
 });
  coffeeMachine.run();
- P.S. Значение onReady по умолчанию должно быть таким же, как и раньше.
- P.P.S. Постарайтесь сделать так, чтобы setOnReady можно было вызвать не только до, но и после запуска кофеварки,
- то есть чтобы функцию onReady можно было изменить в любой момент до её срабатывания.
+ P.S. Р—РЅР°С‡РµРЅРёРµ onReady РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‚Р°РєРёРј Р¶Рµ, РєР°Рє Рё СЂР°РЅСЊС€Рµ.
+ P.P.S. РџРѕСЃС‚Р°СЂР°Р№С‚РµСЃСЊ СЃРґРµР»Р°С‚СЊ С‚Р°Рє, С‡С‚РѕР±С‹ setOnReady РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РІС‹Р·РІР°С‚СЊ РЅРµ С‚РѕР»СЊРєРѕ РґРѕ, РЅРѕ Рё РїРѕСЃР»Рµ Р·Р°РїСѓСЃРєР° РєРѕС„РµРІР°СЂРєРё,
+ С‚Рѕ РµСЃС‚СЊ С‡С‚РѕР±С‹ С„СѓРЅРєС†РёСЋ onReady РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РёР·РјРµРЅРёС‚СЊ РІ Р»СЋР±РѕР№ РјРѕРјРµРЅС‚ РґРѕ РµС‘ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ.
  */
 
 function CoffeeMachine(power, capacity) {
@@ -44,10 +44,10 @@ function CoffeeMachine(power, capacity) {
     }
     this.setWaterAmount = function(amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         }
         waterAmount = amount;
     };
@@ -68,6 +68,6 @@ var coffeeMachine = new CoffeeMachine(20000, 500);
 coffeeMachine.setWaterAmount(150);
 coffeeMachine.setOnReady(function() {
     var amount = coffeeMachine.getWaterAmount();
-    console.log( 'Готов кофе: ' + amount + 'мл' ); // Кофе готов: 150 мл
+    console.log( 'Р“РѕС‚РѕРІ РєРѕС„Рµ: ' + amount + 'РјР»' ); // РљРѕС„Рµ РіРѕС‚РѕРІ: 150 РјР»
 });
 coffeeMachine.run();
