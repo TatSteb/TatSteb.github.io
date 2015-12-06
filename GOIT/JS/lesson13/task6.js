@@ -1,10 +1,10 @@
 /**
- Когда кофеварку выключают — текущая варка кофе должна останавливаться.
- Например, следующий код кофе не сварит:
+ РљРѕРіРґР° РєРѕС„РµРІР°СЂРєСѓ РІС‹РєР»СЋС‡Р°СЋС‚ вЂ” С‚РµРєСѓС‰Р°СЏ РІР°СЂРєР° РєРѕС„Рµ РґРѕР»Р¶РЅР° РѕСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊСЃСЏ.
+ РќР°РїСЂРёРјРµСЂ, СЃР»РµРґСѓСЋС‰РёР№ РєРѕРґ РєРѕС„Рµ РЅРµ СЃРІР°СЂРёС‚:
  var coffeeMachine = new CoffeeMachine(10000);
  coffeeMachine.enable();
  coffeeMachine.run();
- coffeeMachine.disable(); // остановит работу, ничего не выведет
+ coffeeMachine.disable(); // РѕСЃС‚Р°РЅРѕРІРёС‚ СЂР°Р±РѕС‚Сѓ, РЅРёС‡РµРіРѕ РЅРµ РІС‹РІРµРґРµС‚
  */
 
 function CoffeeMachine(power, capacity) {
@@ -19,10 +19,10 @@ function CoffeeMachine(power, capacity) {
     }
     this.setWaterAmount = function(amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         }
         waterAmount = amount;
     };
@@ -30,7 +30,7 @@ function CoffeeMachine(power, capacity) {
         return waterAmount;
     };
     function onReady() {
-        console.log( 'Кофе готов!' );
+        console.log( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }
     this.setOnReady = function(newOnReady) {
         onReady = newOnReady;
@@ -45,7 +45,7 @@ function CoffeeMachine(power, capacity) {
     };
     this.run = function() {
         if (!this._enabled) {
-            throw new Error("Кофеварка выключена");
+            throw new Error("РљРѕС„РµРІР°СЂРєР° РІС‹РєР»СЋС‡РµРЅР°");
         }
         timerId = setTimeout(function() {
             timerId = null;
@@ -57,4 +57,4 @@ function CoffeeMachine(power, capacity) {
 var coffeeMachine = new CoffeeMachine(10000);
 coffeeMachine.enable();
 coffeeMachine.run();
-coffeeMachine.disable(); // остановит работу, ничего не выведет
+coffeeMachine.disable(); // РѕСЃС‚Р°РЅРѕРІРёС‚ СЂР°Р±РѕС‚Сѓ, РЅРёС‡РµРіРѕ РЅРµ РІС‹РІРµРґРµС‚
