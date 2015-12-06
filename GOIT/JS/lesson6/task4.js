@@ -1,22 +1,22 @@
 /**
- Напишите код, который отсортирует массив объектов people по полю age.
- Например:
- var vasya = { name: 'Вася', age: 23 };
- var masha = { name: 'Маша', age: 18 };
- var vovochka = { name: 'Вовочка', age: 6 };
+ РќР°РїРёС€РёС‚Рµ РєРѕРґ, РєРѕС‚РѕСЂС‹Р№ РѕС‚СЃРѕСЂС‚РёСЂСѓРµС‚ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ people РїРѕ РїРѕР»СЋ age.
+ РќР°РїСЂРёРјРµСЂ:
+ var vasya = { name: 'Р’Р°СЃСЏ', age: 23 };
+ var masha = { name: 'РњР°С€Р°', age: 18 };
+ var vovochka = { name: 'Р’РѕРІРѕС‡РєР°', age: 6 };
  var people = [ vasya , masha , vovochka ];
- ... ваш код ...
- // теперь people: [vovochka, masha, vasya]
+ ... РІР°С€ РєРѕРґ ...
+ // С‚РµРїРµСЂСЊ people: [vovochka, masha, vasya]
  console.log(people[0].age) // 6
 
- Выведите список имён в массиве после сортировки.
+ Р’С‹РІРµРґРёС‚Рµ СЃРїРёСЃРѕРє РёРјС‘РЅ РІ РјР°СЃСЃРёРІРµ РїРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё.
  */
 
-var vasya = { name: 'Вася', age: 23 };
-var masha = { name: 'Маша', age: 18 };
-var vovochka = { name: 'Вовочка', age: 6 };
+var vasya = { name: 'Р’Р°СЃСЏ', age: 23 };
+var masha = { name: 'РњР°С€Р°', age: 18 };
+var vovochka = { name: 'Р’РѕРІРѕС‡РєР°', age: 6 };
 var people = [ vasya , masha , vovochka ];
 
 people.sort(function(a, b) { return a.age - b.age; });
-console.log(people);    // теперь people: [vovochka, masha, vasya]
+console.log(people);    // С‚РµРїРµСЂСЊ people: [vovochka, masha, vasya]
 console.log(people[0].age); // 6

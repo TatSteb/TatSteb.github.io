@@ -1,20 +1,20 @@
 /**
- У вас есть объект User, который хранит имя и фамилию в свойстве this.fullName:
+ РЈ РІР°СЃ РµСЃС‚СЊ РѕР±СЉРµРєС‚ User, РєРѕС‚РѕСЂС‹Р№ С…СЂР°РЅРёС‚ РёРјСЏ Рё С„Р°РјРёР»РёСЋ РІ СЃРІРѕР№СЃС‚РІРµ this.fullName:
  function User(fullName) {
   this.fullName = fullName;
 }
- var vasya = new User('Александр Пушкин');
- Имя и фамилия всегда разделяются пробелом.
- Сделайте, чтобы были доступны свойства firstName и lastName, причём не только на чтение, но и на запись, вот так:
- var vasya = new User('Александр Пушкин');
- // чтение firstName/lastName
- console.log( vasya.firstName ); // Александр
- console.log( vasya.lastName ); // Пушкин
- // запись в lastName
- vasya.lastName = 'Толстой';
- console.log( vasya.fullName ); // Александр Толстой
- Важно: в этой задаче fullName должно остаться свойством, а firstName/lastName — реализованы через get/set.
- Лишнее дублирование здесь ни к чему.
+ var vasya = new User('РђР»РµРєСЃР°РЅРґСЂ РџСѓС€РєРёРЅ');
+ РРјСЏ Рё С„Р°РјРёР»РёСЏ РІСЃРµРіРґР° СЂР°Р·РґРµР»СЏСЋС‚СЃСЏ РїСЂРѕР±РµР»РѕРј.
+ РЎРґРµР»Р°Р№С‚Рµ, С‡С‚РѕР±С‹ Р±С‹Р»Рё РґРѕСЃС‚СѓРїРЅС‹ СЃРІРѕР№СЃС‚РІР° firstName Рё lastName, РїСЂРёС‡С‘Рј РЅРµ С‚РѕР»СЊРєРѕ РЅР° С‡С‚РµРЅРёРµ, РЅРѕ Рё РЅР° Р·Р°РїРёСЃСЊ, РІРѕС‚ С‚Р°Рє:
+ var vasya = new User('РђР»РµРєСЃР°РЅРґСЂ РџСѓС€РєРёРЅ');
+ // С‡С‚РµРЅРёРµ firstName/lastName
+ console.log( vasya.firstName ); // РђР»РµРєСЃР°РЅРґСЂ
+ console.log( vasya.lastName ); // РџСѓС€РєРёРЅ
+ // Р·Р°РїРёСЃСЊ РІ lastName
+ vasya.lastName = 'РўРѕР»СЃС‚РѕР№';
+ console.log( vasya.fullName ); // РђР»РµРєСЃР°РЅРґСЂ РўРѕР»СЃС‚РѕР№
+ Р’Р°Р¶РЅРѕ: РІ СЌС‚РѕР№ Р·Р°РґР°С‡Рµ fullName РґРѕР»Р¶РЅРѕ РѕСЃС‚Р°С‚СЊСЃСЏ СЃРІРѕР№СЃС‚РІРѕРј, Р° firstName/lastName вЂ” СЂРµР°Р»РёР·РѕРІР°РЅС‹ С‡РµСЂРµР· get/set.
+ Р›РёС€РЅРµРµ РґСѓР±Р»РёСЂРѕРІР°РЅРёРµ Р·РґРµСЃСЊ РЅРё Рє С‡РµРјСѓ.
  */
 
 function User(fullName) {
@@ -39,10 +39,10 @@ function User(fullName) {
     });
 }
 
-var vasya = new User('Александр Пушкин');
-// чтение firstName/lastName
-console.log( vasya.firstName ); // Александр
-console.log( vasya.lastName ); // Пушкин
-// запись в lastName
-vasya.lastName = 'Толстой';
-console.log( vasya.fullName ); // Александр Толстой
+var vasya = new User('РђР»РµРєСЃР°РЅРґСЂ РџСѓС€РєРёРЅ');
+// С‡С‚РµРЅРёРµ firstName/lastName
+console.log( vasya.firstName ); // РђР»РµРєСЃР°РЅРґСЂ
+console.log( vasya.lastName ); // РџСѓС€РєРёРЅ
+// Р·Р°РїРёСЃСЊ РІ lastName
+vasya.lastName = 'РўРѕР»СЃС‚РѕР№';
+console.log( vasya.fullName ); // РђР»РµРєСЃР°РЅРґСЂ РўРѕР»СЃС‚РѕР№
