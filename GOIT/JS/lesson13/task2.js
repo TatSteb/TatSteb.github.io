@@ -1,7 +1,7 @@
 /**
- Добавьте кофеварке публичный метод addWater(amount), который будет добавлять воду.
- При этом, конечно же, должны происходить все необходимые проверки — на положительность и превышение ёмкости.
- Исходный код:
+ Р”РѕР±Р°РІСЊС‚Рµ РєРѕС„РµРІР°СЂРєРµ РїСѓР±Р»РёС‡РЅС‹Р№ РјРµС‚РѕРґ addWater(amount), РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РґРѕР±Р°РІР»СЏС‚СЊ РІРѕРґСѓ.
+ РџСЂРё СЌС‚РѕРј, РєРѕРЅРµС‡РЅРѕ Р¶Рµ, РґРѕР»Р¶РЅС‹ РїСЂРѕРёСЃС…РѕРґРёС‚СЊ РІСЃРµ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїСЂРѕРІРµСЂРєРё вЂ” РЅР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕСЃС‚СЊ Рё РїСЂРµРІС‹С€РµРЅРёРµ С‘РјРєРѕСЃС‚Рё.
+ РСЃС…РѕРґРЅС‹Р№ РєРѕРґ:
  function CoffeeMachine(power, capacity) {
   var waterAmount = 0;
 
@@ -13,17 +13,17 @@
 
   this.setWaterAmount = function(amount) {
     if (amount < 0) {
-      throw new Error("Значение должно быть положительным");
+      throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
     }
     if (amount > capacity) {
-      throw new Error("Нельзя залить больше, чем " + capacity);
+      throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
     }
 
     waterAmount = amount;
   };
 
   function onReady() {
-    alert( 'Кофе готов!' );
+    alert( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
   }
 
   this.run = function() {
@@ -32,11 +32,11 @@
 
 }
 
- Вот такой код должен приводить к ошибке:
+ Р’РѕС‚ С‚Р°РєРѕР№ РєРѕРґ РґРѕР»Р¶РµРЅ РїСЂРёРІРѕРґРёС‚СЊ Рє РѕС€РёР±РєРµ:
  var coffeeMachine = new CoffeeMachine(100000, 400);
  coffeeMachine.addWater(200);
  coffeeMachine.addWater(100);
- coffeeMachine.addWater(300); // Нельзя залить больше, чем 400
+ coffeeMachine.addWater(300); // РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј 400
  coffeeMachine.run();
  */
 
@@ -48,28 +48,28 @@ function CoffeeMachine(power, capacity) {
     }
     this.setWaterAmount = function(amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         }
         waterAmount = amount;
     };
     function onReady() {
-        console.log( 'Кофе готов!' );
+        console.log( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }
     this.run = function() {
         setTimeout(onReady, getTimeToBoil());
     };
     this.addWater = function (amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         } else {
             if (amount + waterAmount > capacity) {
-                throw new Error("Уже налито " + waterAmount + "! Налейте не больше " + (capacity - waterAmount));
+                throw new Error("РЈР¶Рµ РЅР°Р»РёС‚Рѕ " + waterAmount + "! РќР°Р»РµР№С‚Рµ РЅРµ Р±РѕР»СЊС€Рµ " + (capacity - waterAmount));
             }
         }
         waterAmount += amount;
@@ -80,5 +80,5 @@ function CoffeeMachine(power, capacity) {
 var coffeeMachine = new CoffeeMachine(100000, 400);
 coffeeMachine.addWater(200);
 coffeeMachine.addWater(100);
-coffeeMachine.addWater(300); // Нельзя залить больше, чем 400
+coffeeMachine.addWater(300); // РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј 400
 coffeeMachine.run();

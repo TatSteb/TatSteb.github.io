@@ -1,7 +1,7 @@
 /**
- Добавьте в холодильник методы:
- Публичный метод filterFood(func), который возвращает всю еду, для которой func(item) == true
- Публичный метод removeFood(item), который удаляет еду item из холодильника.
+ Р”РѕР±Р°РІСЊС‚Рµ РІ С…РѕР»РѕРґРёР»СЊРЅРёРє РјРµС‚РѕРґС‹:
+ РџСѓР±Р»РёС‡РЅС‹Р№ РјРµС‚РѕРґ filterFood(func), РєРѕС‚РѕСЂС‹Р№ РІРѕР·РІСЂР°С‰Р°РµС‚ РІСЃСЋ РµРґСѓ, РґР»СЏ РєРѕС‚РѕСЂРѕР№ func(item) == true
+ РџСѓР±Р»РёС‡РЅС‹Р№ РјРµС‚РѕРґ removeFood(item), РєРѕС‚РѕСЂС‹Р№ СѓРґР°Р»СЏРµС‚ РµРґСѓ item РёР· С…РѕР»РѕРґРёР»СЊРЅРёРєР°.
  */
 
 function Machine(power) {
@@ -17,23 +17,23 @@ function Machine(power) {
 }
 
 function Fridge(power) {
-    // унаследовать
+    // СѓРЅР°СЃР»РµРґРѕРІР°С‚СЊ
     Machine.apply(this, arguments);
 
-    var food = []; // приватное свойство food
+    var food = []; // РїСЂРёРІР°С‚РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ food
     this.addFood = function() {
         if (!this._enabled) {
-            throw new Error("Холодильник выключен");
+            throw new Error("РҐРѕР»РѕРґРёР»СЊРЅРёРє РІС‹РєР»СЋС‡РµРЅ");
         }
         if (food.length + arguments.length >= this._power / 100) {
-            throw new Error("Нельзя добавить, не хватает мощности");
+            throw new Error("РќРµР»СЊР·СЏ РґРѕР±Р°РІРёС‚СЊ, РЅРµ С…РІР°С‚Р°РµС‚ РјРѕС‰РЅРѕСЃС‚Рё");
         }
         for (var i = 0; i < arguments.length; i++) {
-            food.push(arguments[i]); // добавить всё из arguments
+            food.push(arguments[i]); // РґРѕР±Р°РІРёС‚СЊ РІСЃС‘ РёР· arguments
         }
     };
     this.getFood = function() {
-        // копируем еду в новый массив, чтобы манипуляции с ним не меняли food
+        // РєРѕРїРёСЂСѓРµРј РµРґСѓ РІ РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ, С‡С‚РѕР±С‹ РјР°РЅРёРїСѓР»СЏС†РёРё СЃ РЅРёРј РЅРµ РјРµРЅСЏР»Рё food
         return food.slice();
     };
     this.filterFood = function(filter) {
@@ -49,28 +49,28 @@ function Fridge(power) {
 var fridge = new Fridge(500);
 fridge.enable();
 fridge.addFood({
-    title: "котлета",
+    title: "РєРѕС‚Р»РµС‚Р°",
     calories: 100
 });
 fridge.addFood({
-    title: "сок",
+    title: "СЃРѕРє",
     calories: 30
 });
 fridge.addFood({
-    title: "зелень",
+    title: "Р·РµР»РµРЅСЊ",
     calories: 10
 });
 fridge.addFood({
-    title: "варенье",
+    title: "РІР°СЂРµРЅСЊРµ",
     calories: 150
 });
-fridge.removeFood("нет такой еды"); // без эффекта
+fridge.removeFood("РЅРµС‚ С‚Р°РєРѕР№ РµРґС‹"); // Р±РµР· СЌС„С„РµРєС‚Р°
 console.log( fridge.getFood().length ); // 4
 var dietItems = fridge.filterFood(function(item) {
     return item.calories < 50;
 });
 dietItems.forEach(function(item) {
-    console.log( item.title ); // сок, зелень
+    console.log( item.title ); // СЃРѕРє, Р·РµР»РµРЅСЊ
     fridge.removeFood(item);
 });
 console.log( fridge.getFood().length ); // 2

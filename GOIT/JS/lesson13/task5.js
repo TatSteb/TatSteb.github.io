@@ -1,12 +1,12 @@
 /**
- В коде CoffeeMachine сделайте так, чтобы метод run выводил ошибку, если кофеварка выключена.
- В итоге должен работать такой код:
+ Р’ РєРѕРґРµ CoffeeMachine СЃРґРµР»Р°Р№С‚Рµ С‚Р°Рє, С‡С‚РѕР±С‹ РјРµС‚РѕРґ run РІС‹РІРѕРґРёР» РѕС€РёР±РєСѓ, РµСЃР»Рё РєРѕС„РµРІР°СЂРєР° РІС‹РєР»СЋС‡РµРЅР°.
+ Р’ РёС‚РѕРіРµ РґРѕР»Р¶РµРЅ СЂР°Р±РѕС‚Р°С‚СЊ С‚Р°РєРѕР№ РєРѕРґ:
  var coffeeMachine = new CoffeeMachine(10000);
- coffeeMachine.run(); // ошибка, кофеварка выключена!
- А вот так — всё в порядке:
+ coffeeMachine.run(); // РѕС€РёР±РєР°, РєРѕС„РµРІР°СЂРєР° РІС‹РєР»СЋС‡РµРЅР°!
+ Рђ РІРѕС‚ С‚Р°Рє вЂ” РІСЃС‘ РІ РїРѕСЂСЏРґРєРµ:
  var coffeeMachine = new CoffeeMachine(10000);
  coffeeMachine.enable();
- coffeeMachine.run(); // ...Кофе готов!
+ coffeeMachine.run(); // ...РљРѕС„Рµ РіРѕС‚РѕРІ!
  */
 
 function CoffeeMachine(power, capacity) {
@@ -21,10 +21,10 @@ function CoffeeMachine(power, capacity) {
     }
     this.setWaterAmount = function(amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         }
         waterAmount = amount;
     };
@@ -32,7 +32,7 @@ function CoffeeMachine(power, capacity) {
         return waterAmount;
     };
     function onReady() {
-        console.log( 'Кофе готов!' );
+        console.log( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }
     this.setOnReady = function(newOnReady) {
         onReady = newOnReady;
@@ -46,7 +46,7 @@ function CoffeeMachine(power, capacity) {
     };
     this.run = function() {
         if (!this._enabled) {
-            throw new Error("Кофеварка выключена");
+            throw new Error("РљРѕС„РµРІР°СЂРєР° РІС‹РєР»СЋС‡РµРЅР°");
         }
         timerId = setTimeout(function() {
             timerId = null;
@@ -57,7 +57,7 @@ function CoffeeMachine(power, capacity) {
 
 
 var coffeeMachine = new CoffeeMachine(100);
-coffeeMachine.run(); // ошибка, кофеварка выключена!
+coffeeMachine.run(); // РѕС€РёР±РєР°, РєРѕС„РµРІР°СЂРєР° РІС‹РєР»СЋС‡РµРЅР°!
 var coffeeMachine2 = new CoffeeMachine(100);
 coffeeMachine2.enable();
-coffeeMachine2.run(); // ...Кофе готов!
+coffeeMachine2.run(); // ...РљРѕС„Рµ РіРѕС‚РѕРІ!

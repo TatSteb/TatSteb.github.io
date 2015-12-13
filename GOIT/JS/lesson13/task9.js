@@ -1,5 +1,5 @@
 /**
- Переопределите метод disable холодильника, чтобы при наличии в нём еды он выдавал ошибку.
+ РџРµСЂРµРѕРїСЂРµРґРµР»РёС‚Рµ РјРµС‚РѕРґ disable С…РѕР»РѕРґРёР»СЊРЅРёРєР°, С‡С‚РѕР±С‹ РїСЂРё РЅР°Р»РёС‡РёРё РІ РЅС‘Рј РµРґС‹ РѕРЅ РІС‹РґР°РІР°Р» РѕС€РёР±РєСѓ.
  */
 
 function Machine(power) {
@@ -15,23 +15,23 @@ function Machine(power) {
 }
 
 function Fridge(power) {
-    // унаследовать
+    // СѓРЅР°СЃР»РµРґРѕРІР°С‚СЊ
     Machine.apply(this, arguments);
 
-    var food = []; // приватное свойство food
+    var food = []; // РїСЂРёРІР°С‚РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ food
     this.addFood = function() {
         if (!this._enabled) {
-            throw new Error("Холодильник выключен");
+            throw new Error("РҐРѕР»РѕРґРёР»СЊРЅРёРє РІС‹РєР»СЋС‡РµРЅ");
         }
         if (food.length + arguments.length >= this._power / 100) {
-            throw new Error("Нельзя добавить, не хватает мощности");
+            throw new Error("РќРµР»СЊР·СЏ РґРѕР±Р°РІРёС‚СЊ, РЅРµ С…РІР°С‚Р°РµС‚ РјРѕС‰РЅРѕСЃС‚Рё");
         }
         for (var i = 0; i < arguments.length; i++) {
-            food.push(arguments[i]); // добавить всё из arguments
+            food.push(arguments[i]); // РґРѕР±Р°РІРёС‚СЊ РІСЃС‘ РёР· arguments
         }
     };
     this.getFood = function() {
-        // копируем еду в новый массив, чтобы манипуляции с ним не меняли food
+        // РєРѕРїРёСЂСѓРµРј РµРґСѓ РІ РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ, С‡С‚РѕР±С‹ РјР°РЅРёРїСѓР»СЏС†РёРё СЃ РЅРёРј РЅРµ РјРµРЅСЏР»Рё food
         return food.slice();
     };
     this.filterFood = function(filter) {
@@ -45,7 +45,7 @@ function Fridge(power) {
     var parentDisable = this.disable;
     this.disable = function() {
         if (food.length) {
-            throw new Error("Нельзя выключить: внутри еда");
+            throw new Error("РќРµР»СЊР·СЏ РІС‹РєР»СЋС‡РёС‚СЊ: РІРЅСѓС‚СЂРё РµРґР°");
         }
         parentDisable();
     };
@@ -53,5 +53,5 @@ function Fridge(power) {
 
 var fridge = new Fridge(500);
 fridge.enable();
-fridge.addFood("кус-кус");
-fridge.disable(); // ошибка, в холодильнике есть еда
+fridge.addFood("РєСѓСЃ-РєСѓСЃ");
+fridge.disable(); // РѕС€РёР±РєР°, РІ С…РѕР»РѕРґРёР»СЊРЅРёРєРµ РµСЃС‚СЊ РµРґР°

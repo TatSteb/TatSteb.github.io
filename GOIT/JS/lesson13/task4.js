@@ -1,7 +1,7 @@
 /**
- Из внешнего кода мы хотели бы иметь возможность понять — запущена кофеварка или нет.
- Для этого добавьте кофеварке публичный метод isRunning(), который будет возвращать true,
- если она запущена и false, если нет.
+ РР· РІРЅРµС€РЅРµРіРѕ РєРѕРґР° РјС‹ С…РѕС‚РµР»Рё Р±С‹ РёРјРµС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїРѕРЅСЏС‚СЊ вЂ” Р·Р°РїСѓС‰РµРЅР° РєРѕС„РµРІР°СЂРєР° РёР»Рё РЅРµС‚.
+ Р”Р»СЏ СЌС‚РѕРіРѕ РґРѕР±Р°РІСЊС‚Рµ РєРѕС„РµРІР°СЂРєРµ РїСѓР±Р»РёС‡РЅС‹Р№ РјРµС‚РѕРґ isRunning(), РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РІРѕР·РІСЂР°С‰Р°С‚СЊ true,
+ РµСЃР»Рё РѕРЅР° Р·Р°РїСѓС‰РµРЅР° Рё false, РµСЃР»Рё РЅРµС‚.
  */
 
 function CoffeeMachine(power, capacity) {
@@ -16,10 +16,10 @@ function CoffeeMachine(power, capacity) {
     }
     this.setWaterAmount = function(amount) {
         if (amount < 0) {
-            throw new Error("Значение должно быть положительным");
+            throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
         }
         if (amount > capacity) {
-            throw new Error("Нельзя залить больше, чем " + capacity);
+            throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
         }
         waterAmount = amount;
     };
@@ -39,9 +39,9 @@ function CoffeeMachine(power, capacity) {
 
 var coffeeMachine = new CoffeeMachine(20000, 500);
 coffeeMachine.setWaterAmount(100);
-console.log( 'До: ' + coffeeMachine.isRunning() ); // До: false
+console.log( 'Р”Рѕ: ' + coffeeMachine.isRunning() ); // Р”Рѕ: false
 coffeeMachine.run();
-console.log( 'В процессе: ' + coffeeMachine.isRunning() ); // В процессе: true
+console.log( 'Р’ РїСЂРѕС†РµСЃСЃРµ: ' + coffeeMachine.isRunning() ); // Р’ РїСЂРѕС†РµСЃСЃРµ: true
 coffeeMachine.setOnReady(function() {
-    console.log( "После: " + coffeeMachine.isRunning() ); // После: false
+    console.log( "РџРѕСЃР»Рµ: " + coffeeMachine.isRunning() ); // РџРѕСЃР»Рµ: false
 });
