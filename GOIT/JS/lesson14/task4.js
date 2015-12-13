@@ -1,7 +1,7 @@
 /**
- Есть класс CoffeeMachine, заданный в функциональном стиле.
- Задача: переписать CoffeeMachine в виде класса с использованием прототипа.
- Исходный код:
+ Р•СЃС‚СЊ РєР»Р°СЃСЃ CoffeeMachine, Р·Р°РґР°РЅРЅС‹Р№ РІ С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРј СЃС‚РёР»Рµ.
+ Р—Р°РґР°С‡Р°: РїРµСЂРµРїРёСЃР°С‚СЊ CoffeeMachine РІ РІРёРґРµ РєР»Р°СЃСЃР° СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїСЂРѕС‚РѕС‚РёРїР°.
+ РСЃС…РѕРґРЅС‹Р№ РєРѕРґ:
  function CoffeeMachine(power) {
   var waterAmount = 0;
   var WATER_HEAT_CAPACITY = 4200;
@@ -10,7 +10,7 @@
   }
   this.run = function() {
     setTimeout(function() {
-      alert( 'Кофе готов!' );
+      alert( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }, getTimeToBoil());
   };
   this.setWaterAmount = function(amount) {
@@ -23,12 +23,12 @@
  */
 
 function CoffeeMachine(power) {
-    // свойства конкретной кофеварки
+    // СЃРІРѕР№СЃС‚РІР° РєРѕРЅРєСЂРµС‚РЅРѕР№ РєРѕС„РµРІР°СЂРєРё
     this._power = power;
     this._waterAmount = 0;
 }
 
-// свойства и методы для всех объектов класса
+// СЃРІРѕР№СЃС‚РІР° Рё РјРµС‚РѕРґС‹ РґР»СЏ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ РєР»Р°СЃСЃР°
 CoffeeMachine.prototype.WATER_HEAT_CAPACITY = 4200;
 
 CoffeeMachine.prototype._getTimeToBoil = function() {
@@ -37,7 +37,7 @@ CoffeeMachine.prototype._getTimeToBoil = function() {
 
 CoffeeMachine.prototype.run = function() {
     setTimeout(function() {
-        console.log( 'Кофе готов!' );
+        console.log( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
     }, this._getTimeToBoil());
 };
 
