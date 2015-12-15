@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<!--  Ниже находится документ с таблицей и формой.
+    Найдите (получите в переменную) в нём:
+    Все элементы label внутри таблицы. Должно быть 3 элемента.
+    Первую ячейку таблицы (со словом "Возраст").
+    Вторую форму в документе.
+    Форму с именем search, без использования её позиции в документе.
+    Элемент input в форме с именем search. Если их несколько, то нужен первый.
+    Элемент с именем info[0], без точного знания его позиции в документе.
+    Элемент с именем info[0], внутри формы с именем search-person.
+-->
+
+<form name="search">
+    <label>Поиск по сайту:
+        <input type="text" name="search">
+    </label>
+    <input type="submit" value="Искать!">
+</form>
+
+<hr>
+
+<form name="search-person">
+    Поиск по посетителям:
+    <table id="age-table">
+        <tr>
+            <td>Возраст:</td>
+            <td id="age-list">
+                <label>
+                    <input type="radio" name="age" value="young">до 18</label>
+                <label>
+                    <input type="radio" name="age" value="mature">18-50</label>
+                <label>
+                    <input type="radio" name="age" value="senior">более 50</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Дополнительно:</td>
+            <td>
+                <input type="text" name="info[0]">
+                <input type="text" name="info[1]">
+                <input type="text" name="info[2]">
+            </td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Искать!">
+</form>
+<script>
+    // 1
+    console.log(document.getElementById('age-table').getElementsByTagName('label'));
+    // 2
+    console.log(document.getElementById('age-table').getElementsByTagName('td')[0]);
+    // в современных браузерах можно одним запросом:
+    var result = document.querySelector('#age-table td');
+    console.log(result);
+    // 3
+    console.log(document.getElementsByTagName('form')[1]);
+    // 4
+    console.log(document.querySelector('form[name="search"]'));
+    // 5
+    console.log(document.querySelector('form[name="search"] input'));
+    // 6
+    console.log(document.getElementsByName("info[0]")[0]);
+    // 7
+    console.log(document.querySelector('form[name="search-person"] [name="info[0]"]'));
+</script>
+</body>
+
+</html>
