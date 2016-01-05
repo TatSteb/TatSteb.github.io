@@ -1,0 +1,81 @@
+body {
+    width: 1200px;
+    height: 650px;
+    background-image: url("./img/bg.png");
+    background-size: 1200px 650px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.enemy {
+    position: absolute;
+    width: 189px;
+    height: 362px;
+    background: url("./img/gunman.png");
+    background-repeat: no-repeat;
+    background-size: 1500px 1800px;
+    margin-top: 170px;
+    margin-left: 1000px;
+}
+
+.round {
+    margin: 20px;
+    display: block;
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+.score {
+    margin: 20px;
+    display: block;
+    float: right;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+.buttons, .message {
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 64px;
+    margin-top: -105px;
+    margin-left: 210px;
+}
+
+.buttons>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.play, .stop, .message {
+    padding-top: 13px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.message {
+    color: #FFFFFF;
+}
+
+.circle1, .circle2 {
+    position: relative;
+    width: 150px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 10px solid rgba(254,254,254,0.3);
+    cursor: pointer;
+}
+
+.circle1:hover, .circle2:hover {
+    border: 10px solid rgba(0,0,254,0.8);
+}
